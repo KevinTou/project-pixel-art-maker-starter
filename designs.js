@@ -1,8 +1,3 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
 function makeGrid() {
     let row = $('#input_height').val();
     let column = $('#input_width').val();
@@ -19,3 +14,15 @@ function makeGrid() {
 function clearGrid() {
     $('.cells').remove();
 }
+
+$(document).ready(function() {
+    $('form').submit(function() {
+        clearGrid();
+        makeGrid();
+        
+        var color = $('#colorPicker').val();
+        $('td').click(function() {
+            $(this).css( "background-color", color);
+        });
+    });
+});
