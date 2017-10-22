@@ -15,3 +15,7 @@ function makeGrid() {
         }
     }
 }
+
+function clearGrid() {
+    $('.cells').remove();
+}
