@@ -23,8 +23,9 @@ $(document).ready(function() {
         clearGrid();
         makeGrid();
         
-        var color = $('#colorPicker').val();
+        var colorPicker = $('#colorPicker');
         $('td').click(function() {
+            var color = colorPicker.val();
             $(this).css( "background-color", color);
         });
     });
