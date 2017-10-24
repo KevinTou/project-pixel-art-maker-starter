@@ -1,11 +1,14 @@
+var height_input = $('#input_height');
+var width_input = $('#input_width');
+
 function makeGrid() {
-    let row = $('#input_height').val();
-    let column = $('#input_width').val();
+    let row = height_input.val();  
+    let column = width_input.val();
     for (let i = 0; i < row; ++i) {
         var rows = $('<tr class="cells">');
         $('#pixel_canvas').append(rows);
         for (let j = 0; j < column; ++j) {
-            var cell = $('<td class="cells">');
+            var cell = $('<td>');
             rows.append(cell);
         }
     }
