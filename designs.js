@@ -1,6 +1,7 @@
 var height_input = $('#input_height');
 var width_input = $('#input_width');
 
+// Creates a grid when called upon using the user submitted values
 function makeGrid() {
     let row = height_input.val();  
     let column = width_input.val();
@@ -14,6 +15,7 @@ function makeGrid() {
     }
 }
 
+// Clears grid when called upon
 function clearGrid() {
     $('.cells').remove();
 }
@@ -23,6 +25,7 @@ $(document).ready(function() {
         clearGrid();
         makeGrid();
         
+// Allows cells to be filled with the color the user chooses
         var colorPicker = $('#colorPicker');
         $('td').click(function() {
             var color = colorPicker.val();
